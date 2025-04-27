@@ -66,6 +66,33 @@
         align-items: center;
         gap: 5px;
       }
+
+      /* WhatsApp Floating Button Styles */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      .whatsapp-float i {
+        font-size: 30px;
+      }
     </style>
   </head>
   <body>
@@ -284,116 +311,68 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <p class="testimonial-text">
-                The combination of Ayurvedic and dental treatments at Surya
-                Clinic has been transformative for my health. After years of
-                digestive issues, Dr. Rohan's treatments finally provided
-                relief, while Dr. Pratiksha gave me the confidence to smile
-                again.
+                Since the last 6 months I have been visiting Dr Rohan for my
+                mother for her knee and back pain. I have tried allopathy even
+                physiotherapy but had only temporary relief. What I saw is the
+                best results from his treatment .. highly recommended .. the
+                most genuine Doctor in today's era.
               </p>
               <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/women/65.jpg"
-                  alt="Anita Desai"
-                  loading="lazy"
-                />
                 <div class="author-info">
-                  <strong>Anita Desai</strong>
-                  <span>Patient for 3 years</span>
+                  <strong>Santosh Sutar</strong>
+                  <span>Patient's Family</span>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <p class="testimonial-text">
-                Dr. Rohan's holistic approach helped resolve my chronic
-                digestion issues that no other doctor could diagnose. His
-                personalized treatment plan and dietary recommendations changed
-                my life. Highly recommend!
+                I have taken treatment for my wife to increase HB. In the
+                initial level HB was 6.5 but after Surya Ayurvedic treatment it
+                raised to 11. It is huge impact for us thank a lot for best
+                service. I am taking others treatment it gives best result.
               </p>
               <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/men/32.jpg"
-                  alt="Raj Patel"
-                  loading="lazy"
-                />
                 <div class="author-info">
-                  <strong>Raj Patel</strong>
-                  <span>Patient for 2 years</span>
+                  <strong>Rahul Devkate</strong>
+                  <span>Patient's Family</span>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <p class="testimonial-text">
-                Dr. Pratiksha gave me the confidence to smile again with her
-                excellent dental work. She's gentle, professional, and explains
-                everything clearly. The entire staff makes you feel comfortable
-                from the moment you walk in.
+                Great experience instantly got relief from my dental issues.
+                Affordable charges and great service towards patient.
               </p>
               <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/women/44.jpg"
-                  alt="Sneha Rao"
-                  loading="lazy"
-                />
                 <div class="author-info">
-                  <strong>Sneha Rao</strong>
-                  <span>Patient for 1 year</span>
+                  <strong>Shrikumar Chauhan</strong>
+                  <span>Patient</span>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <p class="testimonial-text">
-                Excellent care, professional staff. The clinic feels like family
-                now! I've been coming here for both Ayurvedic consultations and
-                dental checkups for years. They remember personal details and
-                always make me feel valued.
+                I can freely express my opinion. Mam has Excellent skills and is
+                very good in dealing with any problems related to her expertise.
               </p>
               <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/men/75.jpg"
-                  alt="Deepak Verma"
-                  loading="lazy"
-                />
                 <div class="author-info">
-                  <strong>Deepak Verma</strong>
-                  <span>Patient for 4 years</span>
+                  <strong>Cheryl Keren</strong>
+                  <span>Patient for 2 months</span>
                 </div>
               </div>
             </div>
             <div class="swiper-slide">
               <p class="testimonial-text">
-                My experience with Panchakarma at Surya Clinic was truly
-                healing. The attention to detail and caring approach made all
-                the difference. I've recommended them to all my friends and
-                family.
+                I had a great surgery with Dr. Pratiksha. She not only performed
+                my surgery with precision but also showed immense care and
+                support throughout my recovery. Her dedication to her patients
+                is truly admirable. Highly recommend...
               </p>
               <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/women/33.jpg"
-                  alt="Asha Mehta"
-                  loading="lazy"
-                />
                 <div class="author-info">
-                  <strong>Asha Mehta</strong>
-                  <span>Patient for 2.5 years</span>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <p class="testimonial-text">
-                The best place for holistic health and a beautiful smile under
-                one roof! I appreciate how Dr. Rohan and Dr. Pratiksha consult
-                with each other when needed to provide comprehensive care. Truly
-                unique.
-              </p>
-              <div class="testimonial-author">
-                <img
-                  src="https://randomuser.me/api/portraits/men/22.jpg"
-                  alt="Vikram Singh"
-                  loading="lazy"
-                />
-                <div class="author-info">
-                  <strong>Vikram Singh</strong>
-                  <span>Patient for 1.5 years</span>
+                  <strong>Samiksha Pansare</strong>
+                  <span>Patient for 2 months</span>
                 </div>
               </div>
             </div>
@@ -654,6 +633,16 @@
         </div>
       </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/919325413079"
+      class="whatsapp-float"
+      target="_blank"
+      aria-label="Contact us on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
