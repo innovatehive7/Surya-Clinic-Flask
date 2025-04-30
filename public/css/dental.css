@@ -103,7 +103,7 @@ p {
 }
 
 .nav-links a:hover {
-  color: #4caf50;
+  color: rgb(15, 189, 220);
 }
 
 .nav-links a.active {
@@ -156,11 +156,7 @@ p {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--primary-color),
-    var(--primary-light)
-  );
+  background: rgb(15, 189, 220);
 }
 
 .header h1 {
@@ -173,7 +169,7 @@ p {
 }
 
 .header span {
-  color: var(--primary-color);
+  color: #23859e;
   position: relative;
 }
 
@@ -222,7 +218,7 @@ p {
   box-shadow: var(--shadow);
   padding: 25px 20px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border-top: 3px solid var(--primary-color);
+  border-top: 3px solid rgb(15, 189, 220);
 }
 
 .card:hover {
@@ -233,7 +229,7 @@ p {
 .card .icon {
   width: 60px;
   height: 60px;
-  background: var(--primary-color);
+  background: rgb(15, 189, 220);
   border-radius: 50%;
   margin: 0 auto 15px;
   display: flex;
@@ -246,7 +242,7 @@ p {
 
 .card:hover .icon {
   transform: rotate(15deg) scale(1.1);
-  background: var(--primary-dark);
+  background: rgb(15, 189, 220);
 }
 
 .card h3 {
@@ -263,7 +259,7 @@ p {
 .card a {
   display: inline-block;
   margin-top: 12px;
-  color: var(--primary-color);
+  color: rgb(15, 189, 220);
   text-decoration: none;
   font-weight: 600;
   position: relative;
@@ -277,7 +273,7 @@ p {
 }
 
 .card a:hover {
-  color: var(--primary-dark);
+  color: rgb(15, 189, 220);
 }
 
 .card a:hover::after {
@@ -288,11 +284,7 @@ p {
   display: inline-block;
   margin: 25px auto 50px;
   padding: 12px 35px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--primary-light)
-  );
+  background: rgb(15, 189, 220);
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -341,7 +333,7 @@ p {
   position: absolute;
   opacity: 0.1;
   z-index: 0;
-  color: var(--primary-color);
+  color: #245e7a;
   animation: float 15s infinite linear;
 }
 
@@ -386,7 +378,7 @@ footer {
 .footer-column h3 {
   font-size: 1.1rem;
   margin-bottom: 12px;
-  color: var(--primary-color);
+  color: rgb(15, 189, 220);
 }
 
 .footer-column ul {
@@ -480,15 +472,15 @@ footer {
 @keyframes pulse {
   0% {
     transform: scale(1);
-    box-shadow: 0 3px 12px rgba(76, 175, 80, 0.3);
+    box-shadow: rgb(15, 189, 220);
   }
   50% {
     transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(76, 175, 80, 0.5);
+    box-shadow: rgb(15, 189, 220);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 3px 12px rgba(76, 175, 80, 0.3);
+    box-shadow: rgb(15, 189, 220);
   }
 }
 
