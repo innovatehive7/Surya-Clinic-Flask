@@ -28,74 +28,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <link rel="stylesheet" href="/css/styles.css" />
-    <style>
-      /* Add to your styles.css */
-      .appointment-form {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .form-group {
-        margin-bottom: 15px;
-        display: flex;
-        gap: 15px;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-
-      .form-radio {
-        margin: 15px 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .form-radio label {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-      }
-
-      /* WhatsApp Floating Button Styles */
-      .whatsapp-float {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-        background-color: #25d366;
-        color: white;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        text-decoration: none;
-        transition: transform 0.2s;
-      }
-
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-      }
-
-      .whatsapp-float i {
-        font-size: 30px;
-      }
-    </style>
+    <!-- Add jsPDF for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
   <body>
+    <!-- WhatsApp Icon -->
+    <div class="whatsapp-icon">
+      <a
+        href="https://wa.me/919890040169"
+        target="_blank"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+
     <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -108,10 +55,11 @@
         class="hamburger"
         aria-label="Toggle navigation menu"
         aria-expanded="false"
+        aria-controls="nav-links"
       >
         <i class="fas fa-bars"></i>
       </button>
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="/ayurvedic">Ayurvedic</a></li>
@@ -147,11 +95,7 @@
           </div>
         </div>
         <div class="hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-            alt="Doctors Team"
-            loading="lazy"
-          />
+          <img src="images/hero.jpg" alt="Doctors Team" loading="lazy" />
         </div>
       </section>
 
@@ -169,7 +113,7 @@
           <div class="about-container">
             <div class="about-image">
               <img
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                src="images/hero1.jpg"
                 alt="Clinic Interior"
                 loading="lazy"
               />
@@ -243,21 +187,21 @@
             <div
               class="card-image"
               style="background-image: url('/images/IMG_5657.JPG')"
-              aria-label="Dr. Rohan Vishwasrao, Ayurvedic Specialist"
+              aria-label="Dr. Rahul Sharma, Ayurvedic Specialist"
             >
               <div class="badge">Ayurvedic Specialist</div>
             </div>
             <div class="card-body">
-              <h3>Dr. Rohan Vishwasrao</h3>
-              <p><em>B.A.M.S, MD (Ayurveda)</em></p>
+              <h3>Dr. Rahul Sharma</h3>
+              <p><em>B.A.M.S, MD (Ayurveda), Ayurved Consultant</em></p>
               <p>
-                With over 15 years of experience in Ayurvedic medicine, Dr.
-                Rohan specializes in holistic treatments that address the root
-                cause of health issues. His approach combines traditional
-                Ayurvedic wisdom with modern medical knowledge.
+                With over 7 years of experience in Ayurvedic medicine, Dr. Rahul
+                specializes in holistic treatments that address the root cause
+                of health issues. His approach combines traditional Ayurvedic
+                wisdom with modern medical knowledge.
               </p>
               <ul>
-                <li>Graduated from Pune Ayurvedic College</li>
+                <li>Graduated from Pune Ayurvedic College in 2018</li>
                 <li>Certified in Panchakarma Therapy</li>
                 <li>Specializes in digestive disorders</li>
                 <li>Expert in herbal formulations</li>
@@ -269,24 +213,23 @@
             <div
               class="card-image"
               style="background-image: url('/images/IMG_5655.JPG')"
-              aria-label="Dr. Pratiksha Suryadental, Dental Specialist"
+              aria-label="Dr. Priya Sharma, Dental Specialist"
             >
               <div class="badge dental">Dental Specialist</div>
             </div>
             <div class="card-body">
-              <h3>Dr. Pratiksha Suryadental</h3>
-              <p><em>BDS, MDS (Orthodontics)</em></p>
+              <h3>Dr. Priya Sharma</h3>
+              <p><em>BDS (Dental Surgeon), Implantologist</em></p>
               <p>
-                Dr. Pratiksha brings 12 years of experience in dental care with
-                expertise in cosmetic and restorative dentistry. She is
-                passionate about creating beautiful, healthy smiles while
-                ensuring patient comfort.
+                Dr. Priya brings 5 years of experience in dental care with
+                expertise in dental surgery and implantology. She is passionate
+                about creating beautiful, healthy smiles while ensuring advanced
+                care for her patients.
               </p>
               <ul>
-                <li>Graduated from Dental College of Pune</li>
-                <li>Specialization in Cosmetic Dentistry</li>
+                <li>Graduated at 2020</li>
+                <li>Fellowship in Oral Implantology</li>
                 <li>Expert in dental implants</li>
-                <li>Certified Invisalign provider</li>
                 <li>Speaks English, Hindi, Marathi</li>
               </ul>
             </div>
@@ -413,103 +356,136 @@
             </p>
             <p>
               <i class="fas fa-phone"></i>
-              <a href="tel:+919876543210" aria-label="Call Surya Clinic"
-                >+91 98765 43210</a
+              <a href="tel:+919890040169" aria-label="Call Surya Clinic"
+                >+91 9890040169</a
               >
             </p>
             <p>
               <i class="fas fa-envelope"></i>
               <a
-                href="mailto:info@suryaclinic.com"
+                href="mailto:suryaclinic2023@gmail.com"
                 aria-label="Email Surya Clinic"
-                >info@suryaclinic.com</a
+                >suryaclinic2023@gmail.com</a
               >
             </p>
           </div>
           <div class="appointment-form">
             <h3>Request an Appointment</h3>
-            <form id="appointmentForm" aria-label="Appointment request form">
-              <input type="hidden" name="submissionTime" id="submissionTime" />
+            <form
+              id="appointmentForm"
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAnWLsLmRNPUlGdo11mVlawg2zWZrbwzfkXxA5uRB17xfUfg/formResponse?pli=1"
+              method="POST"
+              aria-label="Appointment request form"
+              onsubmit="return false;"
+            >
+              <input
+                type="hidden"
+                name="entry.1050749232"
+                id="submissionTime"
+                data-field="Submission Time"
+              />
+
               <div class="form-group">
                 <input
                   type="text"
-                  name="name"
+                  name="entry.2005620554"
                   placeholder="Your Name"
                   required
                   aria-label="Your Name"
+                  data-field="Your Name"
                 />
                 <input
                   type="tel"
-                  name="phone"
+                  name="entry.1065046570"
                   placeholder="Your Phone"
                   required
                   pattern="[0-9]{10}"
                   aria-label="Your Phone Number"
+                  data-field="Your Phone"
                 />
               </div>
+
               <div class="form-group">
                 <input
                   type="email"
-                  name="email"
+                  name="entry.1045781291"
                   placeholder="Your Email"
                   required
                   aria-label="Your Email"
+                  data-field="Your Email"
                 />
                 <input
                   type="datetime-local"
-                  name="date"
+                  name="entry.1166974658"
                   required
                   aria-label="Preferred Appointment Date"
                   id="appointmentDate"
+                  data-field="Preferred Appointment Date"
                 />
               </div>
+
               <div class="form-radio">
                 <label>
                   <input
                     type="radio"
-                    name="service"
+                    name="entry.2038385665"
                     value="Ayurvedic Consultation"
                     required
+                    data-field="Service"
                   />
                   Ayurvedic Consultation
                 </label>
                 <label>
                   <input
                     type="radio"
-                    name="service"
-                    value="Dental Consultation"
+                    name="entry.2038385665"
+                    value="Dental Checkup"
+                    data-field="Service"
                   />
-                  Dental Consultation
+                  Dental Checkup
                 </label>
                 <label>
-                  <input type="radio" name="service" value="Both Services" />
-                  Both Services
+                  <input
+                    type="radio"
+                    name="entry.2038385665"
+                    value="Both"
+                    data-field="Service"
+                  />
+                  Both
                 </label>
               </div>
+
               <div class="form-group">
                 <select
-                  name="doctor"
+                  name="entry.839337160"
                   required
                   aria-label="Select Preferred Doctor"
+                  data-field="Select Preferred Doctor"
                 >
-                  <option value="">Select Preferred Doctor</option>
-                  <option value="Dr. Rohan Vishwasrao (Ayurvedic)">
-                    Dr. Rohan Vishwasrao (Ayurvedic)
+                  <option value="" disabled selected>
+                    Select Preferred Doctor
                   </option>
-                  <option value="Dr. Pratiksha Suryadental (Dental)">
-                    Dr. Pratiksha Suryadental (Dental)
+                  <option value="Dr. Rahul Sharma (Ayurvedic)">
+                    Dr. Rahul Sharma (Ayurvedic)
+                  </option>
+                  <option value="Dr. Priya Sharma (Dental)">
+                    - Dr. Priya Sharma (Dental)
                   </option>
                   <option value="Both Doctors">Both Doctors</option>
                 </select>
               </div>
+
               <div class="form-group">
                 <textarea
-                  name="concerns"
+                  name="entry.209192588"
                   rows="4"
                   placeholder="Please share any specific concerns or questions"
                   aria-label="Specific concerns or questions"
+                  data-field="Concerns"
+                  required
                 ></textarea>
               </div>
+
               <button
                 type="submit"
                 class="submit-btn"
@@ -518,6 +494,10 @@
                 <i class="fas fa-calendar-check"></i> Book Appointment
               </button>
             </form>
+
+            <div id="successMessage" style="display: none">
+              <p>Appointment successfully submitted!</p>
+            </div>
           </div>
         </div>
       </section>
@@ -535,31 +515,18 @@
         </div>
         <div class="info-group">
           <i class="fas fa-phone-alt"></i>
-          <div class="info-text">
-            +91 98765 43210<br />
-            +91 98765 43211
-          </div>
+          <div class="info-text">+91 9890040169</div>
         </div>
         <div class="info-group">
           <i class="fas fa-envelope"></i>
-          <div class="info-text">
-            info@suryaclinic.com<br />
-            appointments@suryaclinic.com
-          </div>
+          <div class="info-text">suryaclinic2023@gmail.com</div>
         </div>
         <hr />
         <h4>Follow Us</h4>
         <div class="socials">
-          <a href="#" aria-label="Facebook"
-            ><i class="fab fa-facebook-f"></i
+          <a href="https://www.instagram.com/suryaclinic" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
           ></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a
-            href="https://www.instagram.com/suryaclinic"
-            aria-label="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
         </div>
       </div>
       <div class="map">
@@ -580,19 +547,26 @@
             Combining the wisdom of Ayurveda and modern dental science for
             complete family healthcare.
           </p>
+          <p>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+919890040169" aria-label="Call Surya Clinic"
+              >+91 9890040169</a
+            >
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a
+              href="mailto:suryaclinic2023@gmail.com"
+              aria-label="Email Surya Clinic"
+              >suryaclinic2023@gmail.com</a
+            >
+          </p>
           <div class="social-links">
-            <a href="#" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
             <a
               href="https://www.instagram.com/suryaclinic"
               aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
         <div class="footer-column">
@@ -606,14 +580,16 @@
           </ul>
         </div>
         <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#doctors">Our Doctors</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#appointment">Book Now</a></li>
-          </ul>
+          <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#doctors">Our Doctors</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#appointment">Book Now</a></li>
+            </ul>
+          </div>
         </div>
         <div class="footer-column">
           <h3>Clinic Hours</h3>
@@ -625,7 +601,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Surya Clinic. All Rights Reserved.</p>
+        <p>
+          © 2025 Surya Clinic. All Rights Reserved. Developed by
+          <a href="https://www.innovatehive.in/">InnovateHive</a>
+        </p>
         <div>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
@@ -634,128 +613,252 @@
       </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a
-      href="https://wa.me/919325413079"
-      class="whatsapp-float"
-      target="_blank"
-      aria-label="Contact us on WhatsApp"
-    >
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="/js/common.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Initialize Swiper for testimonials
-        const swiper = new Swiper(".swiper", {
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          autoplay: {
-            delay: 5000,
-          },
-        });
+        console.log("Script loaded successfully");
 
-        // Set current timestamp when form loads
-        document.getElementById("submissionTime").value =
-          new Date().toISOString();
+        // Navbar Toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (hamburger && navLinks) {
+          hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("nav-active");
+            const isExpanded = navLinks.classList.contains("nav-active");
+            hamburger.setAttribute("aria-expanded", isExpanded);
+            const icon = hamburger.querySelector("i");
+            icon.classList.toggle("fa-bars");
+            icon.classList.toggle("fa-times");
+          });
+        } else {
+          console.error("Hamburger or nav-links not found");
+        }
+
+        // Initialize Swiper for testimonials
+        try {
+          const swiper = new Swiper(".swiper", {
+            loop: true,
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            autoplay: { delay: 5000 },
+          });
+          console.log("Swiper initialized successfully");
+        } catch (error) {
+          console.error("Error initializing Swiper:", error);
+        }
+
+        // Set current timestamp for form
+        const submissionTimeInput = document.getElementById("submissionTime");
+        if (submissionTimeInput) {
+          submissionTimeInput.value = new Date().toISOString();
+          console.log("Submission time set:", submissionTimeInput.value);
+        } else {
+          console.error("Submission time input not found");
+        }
 
         // Set minimum date/time for appointment
         const dateInput = document.getElementById("appointmentDate");
-        const now = new Date();
-        const timezoneOffset = now.getTimezoneOffset() * 60000;
-        const localISOTime = new Date(now - timezoneOffset)
-          .toISOString()
-          .slice(0, 16);
-        dateInput.min = localISOTime;
+        if (dateInput) {
+          const now = new Date();
+          const localISOTime = new Date(now - now.getTimezoneOffset() * 60000)
+            .toISOString()
+            .slice(0, 16);
+          dateInput.min = localISOTime;
+          console.log("Date input minimum set to:", localISOTime);
+        } else {
+          console.error("Appointment date input not found");
+        }
 
-        // Handle appointment form submission
+        // Handle form submission
         const form = document.getElementById("appointmentForm");
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
+        if (!form) {
+          console.error("Appointment form not found");
+          return;
+        }
+        console.log("Appointment form found");
 
-          // Get form data
-          const formData = new FormData(form);
-          const data = {
-            name: formData.get("name"),
-            phone: formData.get("phone"),
-            email: formData.get("email"),
-            date: formData.get("date"),
-            service: formData.get("service"),
-            doctor: formData.get("doctor"),
-            concerns: formData.get("concerns") || "None",
-            submissionTime: formData.get("submissionTime"),
+        form.removeAttribute("onsubmit");
+        form.addEventListener("submit", handleFormSubmit);
+
+        async function handleFormSubmit(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log(
+            "Form submission intercepted, default behavior prevented"
+          );
+
+          const fields = {
+            name: form.elements["entry.2005620554"].value,
+            phone: form.elements["entry.1065046570"].value,
+            email: form.elements["entry.1045781291"].value,
+            date: form.elements["entry.1166974658"].value,
+            service: form.querySelector(
+              'input[name="entry.2038385665"]:checked'
+            ),
+            doctor: form.elements["entry.839337160"].value,
+            concerns: form.elements["entry.209192588"].value,
           };
 
-          // Validate form data
-          function validateForm(data) {
-            if (!data.name || data.name.length < 2) {
-              throw new Error("Please enter a valid name");
-            }
+          console.log("Form data for validation:", fields);
 
-            if (!data.phone || !/^\d{10}$/.test(data.phone)) {
-              throw new Error("Please enter a valid 10-digit phone number");
-            }
-
-            if (!data.email || !/^\S+@\S+\.\S+$/.test(data.email)) {
-              throw new Error("Please enter a valid email address");
-            }
-
-            if (!data.date || new Date(data.date) < new Date()) {
-              throw new Error("Please select a future date and time");
-            }
-
-            if (!data.service) {
-              throw new Error("Please select a service");
-            }
-
-            if (!data.doctor) {
-              throw new Error("Please select a doctor");
-            }
+          if (!fields.name || fields.name.length < 2) {
+            alert("Please enter a valid name");
+            form.elements["entry.2005620554"].focus();
+            return;
           }
+          if (!fields.phone || !/^\d{10}$/.test(fields.phone)) {
+            alert("Please enter a valid 10-digit phone number");
+            form.elements["entry.1065046570"].focus();
+            return;
+          }
+          if (!fields.email || !/^\S+@\S+\.\S+$/.test(fields.email)) {
+            alert("Please enter a valid email address");
+            form.elements["entry.1045781291"].focus();
+            return;
+          }
+          if (!fields.date || new Date(fields.date) < new Date()) {
+            alert("Please select a future date and time");
+            form.elements["entry.1166974658"].focus();
+            return;
+          }
+          if (!fields.service) {
+            alert("Please select a service");
+            return;
+          }
+          if (!fields.doctor) {
+            alert("Please select a doctor");
+            form.elements["entry.839337160"].focus();
+            return;
+          }
+          if (!fields.concerns || fields.concerns.trim() === "") {
+            alert("Please share your concerns or questions");
+            form.elements["entry.209192588"].focus();
+            return;
+          }
+
+          const submitBtn = form.querySelector(".submit-btn");
+          if (!submitBtn) {
+            console.error("Submit button not found");
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Submitting...';
 
           try {
-            validateForm(data);
+            const formData = new FormData(form);
+            console.log("Form data being sent:", Object.fromEntries(formData));
 
-            // Send data to the backend
-            const response = await fetch("/book-appointment", {
+            const response = await fetch(form.action, {
               method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
+              body: formData,
+              mode: "no-cors",
             });
 
-            const result = await response.json();
+            console.log("Form submission response:", response);
 
-            if (response.ok) {
-              alert("Appointment booked successfully!");
+            const successMessage = document.getElementById("successMessage");
+            if (successMessage) {
+              successMessage.style.display = "block";
               form.reset();
-              // Reset the hidden timestamp
-              document.getElementById("submissionTime").value =
-                new Date().toISOString();
+              submissionTimeInput.value = new Date().toISOString();
+              setTimeout(() => {
+                successMessage.style.display = "none";
+              }, 5000);
             } else {
-              throw new Error(result.message || "Failed to book appointment");
+              console.error("Success message element not found");
             }
+
+            // Generate and download PDF
+            generateAppointmentPDF(fields);
           } catch (error) {
-            console.error("Error:", error);
+            console.error("Form submission error:", error);
             alert(
-              error.message ||
-                "There was an error booking your appointment. Please try again."
+              "An error occurred while submitting the form. Please try again."
             );
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML =
+              '<i class="fas fa-calendar-check"></i> Book Appointment';
           }
-        });
+        }
+
+        // Function to generate PDF matching the provided image format and colors
+        function generateAppointmentPDF(formData) {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF();
+
+          // Set font and colors to mimic the image
+          doc.setFont("helvetica");
+          doc.setTextColor(0, 51, 102); // Dark blue (#003366)
+
+          // Title and subtitle
+          doc.setFontSize(20);
+          doc.text("Surya Clinic", 105, 20, { align: "center" });
+          doc.setFontSize(16);
+          doc.text("Appointment Confirmation", 105, 30, { align: "center" });
+
+          // Add green line
+          doc.setDrawColor(0, 204, 153); // Green color (#00CC99)
+          doc.line(10, 40, 200, 40); // Horizontal line across the page
+
+          // Clinic details
+          doc.setFontSize(12);
+          doc.text(
+            "123 Wellness Street, Aundh, Pune, Maharashtra 411007",
+            105,
+            50,
+            { align: "center" }
+          );
+          doc.text(
+            "Phone: +91 98765 43210 | Email: info@suryaclinic.com",
+            105,
+            60,
+            { align: "center" }
+          );
+
+          // Appointment Details section
+          doc.setFontSize(14);
+          doc.text("Appointment Details", 20, 80);
+          doc.setFontSize(12);
+          doc.text(`Name: ${formData.name}`, 20, 90);
+          doc.text(`Phone: ${formData.phone}`, 20, 100);
+          doc.text(`Email: ${formData.email}`, 20, 110);
+          doc.text(
+            `Preferred Date: ${new Date(formData.date).toLocaleDateString()}`,
+            20,
+            120
+          );
+          doc.text(`Service: ${formData.service.value}`, 20, 130);
+          doc.text(`Preferred Doctor: ${formData.doctor}`, 20, 140);
+          doc.text(`Submission Time: ${new Date().toLocaleString()}`, 20, 150);
+
+          // Specific Concerns section
+          doc.setFontSize(14);
+          doc.text("Specific Concerns:", 20, 170);
+          doc.setFontSize(12);
+          doc.text(formData.concerns || "Not specified", 20, 180);
+
+          // Add serial number at the top
+          const srNo = `SR-${Date.now()}`;
+          doc.setFontSize(10);
+          doc.text(`Serial No: ${srNo}`, 10, 10);
+
+          // Save the PDF
+          doc.save(`Appointment_Confirmation_${srNo}.pdf`);
+        }
+
+        console.log("Script execution completed");
       });
+
+      console.log("Script file loaded");
     </script>
   </body>
 </html>
