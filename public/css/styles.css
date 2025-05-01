@@ -179,7 +179,7 @@ section {
   transition: background-color 0.3s ease, transform 0.2s ease;
   border: none;
   cursor: pointer;
-  margin-left: clamp(10px, 2vw, 15px);
+  margin-left: clamp(10px, 2vw, 59px);
 }
 
 .appointment-btn:hover {
@@ -234,8 +234,24 @@ section {
 
 .hero-buttons {
   display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2.5vw, 15px);
+  align-items: center;
+  right: 59px;
+}
+
+.top-buttons {
+  display: flex;
+  flex-direction: row;
   gap: clamp(8px, 2vw, 10px);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.bottom-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .btn {
@@ -255,7 +271,7 @@ section {
   color: white;
   border: 2px solid #4caf50;
   width: 100%;
-  max-width: clamp(180px, 30vw, 220px);
+  max-width: clamp(180px, 30vw, 200px);
 }
 
 .btn:hover {
@@ -270,6 +286,17 @@ section {
 
 .dental-btn:hover {
   background-color: #2563eb;
+}
+
+.book-appointment-btn {
+  background-color: #245e7a;
+  border-color: #245e7a;
+  max-width: clamp(180px, 30vw, 200px);
+  margin: 0 auto;
+}
+
+.book-appointment-btn:hover {
+  background-color: #1b4557;
 }
 
 .hero-image {
@@ -348,6 +375,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: clamp(12px, 2.5vw, 15px);
   margin-top: clamp(12px, 2.5vw, 15px);
+  width: 520px;
 }
 
 .feature {
@@ -458,6 +486,7 @@ section {
   padding-left: clamp(15px, 3vw, 18px);
   position: relative;
   font-size: clamp(0.8rem, 2.2vw, 0.85rem);
+  font-weight: bold;
 }
 
 .card-body ul li::before {
@@ -763,10 +792,25 @@ hr {
 .socials {
   display: flex;
   gap: clamp(10px, 2vw, 12px);
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .socials a {
-  background-color: #0d6efd;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   color: white;
   padding: clamp(7px, 1.5vw, 8px);
   border-radius: 50%;
@@ -774,11 +818,19 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  width: clamp(30px, 5vw, 34px);
+  height: clamp(30px, 5vw, 34px);
 }
 
 .socials a:hover {
-  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.social-name {
+  margin-top: clamp(5px, 1vw, 6px);
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
+  color: #333;
 }
 
 .map {
@@ -844,25 +896,46 @@ footer {
 
 .social-links {
   display: flex;
-  gap: clamp(8px, 2vw, 10px);
+  gap: clamp(8px, 2vw, 13px);
   margin-top: clamp(10px, 2vw, 12px);
+  flex-wrap: wrap;
+}
+
+.social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .social-links a {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
   width: clamp(30px, 5vw, 34px);
   height: clamp(30px, 5vw, 34px);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .social-links a:hover {
-  background: #4caf40;
+  transform: scale(1.1);
+}
+
+.social-name {
+  margin-top: clamp(5px, 1vw, 6px);
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
+  color: #8a8f98;
 }
 
 .footer-bottom {
@@ -978,7 +1051,27 @@ footer {
   }
 
   .hero-buttons {
+    align-items: center;
+  }
+
+  .top-buttons {
+    flex-direction: row;
     justify-content: center;
+    gap: clamp(8px, 2vw, 10px);
+  }
+
+  .bottom-button {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .btn {
+    max-width: clamp(160px, 45vw, 180px);
+  }
+
+  .book-appointment-btn {
+    max-width: clamp(160px, 45vw, 180px);
+    margin-right: 0; /* Remove the desktop margin */
   }
 
   .hero-image img {
@@ -1081,7 +1174,25 @@ footer {
   }
 
   .hero-buttons {
+    align-items: center;
+  }
+
+  .top-buttons {
     justify-content: center;
+  }
+
+  .bottom-button {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .btn {
+    max-width: clamp(180px, 40vw, 200px);
+  }
+
+  .book-appointment-btn {
+    max-width: clamp(180px, 40vw, 200px);
+    margin-right: 0; /* Remove the desktop margin */
   }
 
   .hero-image img {
@@ -1199,6 +1310,8 @@ footer {
   .about-image img,
   .card-image {
     image-rendering: -webkit-optimize-contrast;
+    position: relative;
+    left: 40px;
   }
 
   body {
