@@ -115,11 +115,11 @@ p {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(10px, 3vw, 15px);
+  padding: 0 clamp(15px, 3vw, 20px);
 }
 
 section {
-  padding: clamp(30px, 5vw, 40px) 0;
+  padding: clamp(40px, 5vw, 60px) 0;
 }
 
 /* Navbar */
@@ -127,16 +127,17 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 20px);
   background-color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
+  gap: 20px;
 }
 
 .logo {
-  font-size: clamp(1.4rem, 4vw, 1.6rem);
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
   font-weight: 700;
 }
 
@@ -151,15 +152,14 @@ section {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: clamp(15px, 3vw, 20px);
+  gap: clamp(20px, 3vw, 25px);
   margin-left: auto;
-  margin-right: clamp(8px, 2vw, 10px);
 }
 
 .nav-links a {
   text-decoration: none;
   color: #333;
-  font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -172,14 +172,13 @@ section {
   background-color: #245e7a;
   color: white;
   text-decoration: none;
-  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 15px);
+  padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2.5vw, 20px);
   border-radius: 6px;
-  font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+  font-size: clamp(0.85rem, 2.2vw, 0.95rem);
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border: none;
   cursor: pointer;
-  margin-left: clamp(10px, 2vw, 59px);
 }
 
 .appointment-btn:hover {
@@ -190,12 +189,12 @@ section {
 /* Hamburger Menu */
 .hamburger {
   display: none;
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
   cursor: pointer;
   color: #245e7a;
   background: none;
   border: none;
-  padding: clamp(6px, 1.5vw, 8px);
+  padding: clamp(8px, 1.5vw, 10px);
 }
 
 /* Hero Section */
@@ -279,6 +278,15 @@ section {
   transform: translateY(-2px);
 }
 
+.ayurvedic-btn {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.ayurvedic-btn:hover {
+  background-color: #3d8b40;
+}
+
 .dental-btn {
   background-color: #3b82f6;
   border-color: #3b82f6;
@@ -317,18 +325,18 @@ section {
 /* Section Titles */
 .section-title {
   text-align: center;
-  margin-bottom: clamp(20px, 4vw, 30px);
+  margin-bottom: clamp(30px, 4vw, 40px);
 }
 
 .section-title h2 {
-  font-size: clamp(1.6rem, 4vw, 2rem);
-  margin-bottom: clamp(6px, 1.5vw, 8px);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin-bottom: clamp(8px, 1.5vw, 10px);
 }
 
 .section-title p {
   color: #666;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
-  max-width: 550px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -336,61 +344,59 @@ section {
 .about-container {
   display: flex;
   align-items: center;
-  gap: clamp(20px, 4vw, 30px);
+  gap: clamp(30px, 4vw, 40px);
   flex-wrap: wrap;
 }
 
 .about-image {
   flex: 1;
-  min-width: clamp(250px, 40vw, 280px);
+  min-width: clamp(280px, 40vw, 320px);
 }
 
 .about-image img {
   width: 100%;
-  max-width: clamp(350px, 80vw, 400px);
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
   flex: 1;
-  min-width: clamp(250px, 40vw, 280px);
+  min-width: clamp(280px, 40vw, 320px);
 }
 
 .about-content h2 {
-  font-size: clamp(1.4rem, 3.5vw, 1.6rem);
-  margin-bottom: clamp(12px, 2vw, 15px);
+  font-size: clamp(1.6rem, 3.5vw, 1.8rem);
+  margin-bottom: clamp(15px, 2vw, 20px);
 }
 
 .about-content p {
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   line-height: 1.6;
-  margin-bottom: clamp(10px, 2vw, 12px);
+  margin-bottom: clamp(12px, 2vw, 15px);
 }
 
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: clamp(12px, 2.5vw, 15px);
-  margin-top: clamp(12px, 2.5vw, 15px);
-  width: 520px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(15px, 2.5vw, 20px);
+  margin-top: clamp(15px, 2.5vw, 20px);
 }
 
 .feature {
   display: flex;
   align-items: flex-start;
-  gap: clamp(8px, 2vw, 10px);
+  gap: clamp(10px, 2vw, 12px);
 }
 
 .circle {
-  width: clamp(20px, 3vw, 22px);
-  height: clamp(20px, 3vw, 22px);
+  width: clamp(22px, 3vw, 24px);
+  height: clamp(22px, 3vw, 24px);
   border-radius: 50%;
   background-color: #4caf50;
   color: white;
-  font-size: clamp(0.7rem, 2vw, 0.75rem);
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -398,13 +404,13 @@ section {
 }
 
 .feature-text h4 {
-  font-size: clamp(0.95rem, 2.5vw, 1rem);
-  margin-bottom: clamp(3px, 1vw, 4px);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: clamp(4px, 1vw, 5px);
   color: #245e7a;
 }
 
 .feature-text p {
-  font-size: clamp(0.85rem, 2.2vw, 0.9rem);
+  font-size: clamp(0.9rem, 2.2vw, 0.95rem);
   color: #666;
 }
 
@@ -417,19 +423,19 @@ section {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(clamp(250px, 40vw, 280px), 1fr)
+    minmax(clamp(280px, 40vw, 320px), 1fr)
   );
-  gap: clamp(20px, 4vw, 30px);
-  padding: clamp(8px, 2vw, 10px);
+  gap: clamp(25px, 4vw, 35px);
+  padding: clamp(10px, 2vw, 15px);
   justify-content: center;
   margin: 0 auto;
-  max-width: clamp(900px, 90vw, 1100px);
+  max-width: clamp(1000px, 90vw, 1200px);
 }
 
 .card {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -439,7 +445,7 @@ section {
 }
 
 .card-image {
-  height: clamp(240px, 40vw, 280px);
+  height: clamp(260px, 40vw, 300px);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -448,13 +454,13 @@ section {
 .badge {
   background: #4caf50;
   color: white;
-  padding: clamp(3px, 1vw, 4px) clamp(8px, 2vw, 10px);
-  font-size: clamp(0.8rem, 2.2vw, 0.85rem);
+  padding: clamp(4px, 1vw, 5px) clamp(10px, 2vw, 12px);
+  font-size: clamp(0.85rem, 2.2vw, 0.9rem);
   font-weight: 500;
   border-radius: 15px;
   position: absolute;
-  bottom: clamp(10px, 2vw, 12px);
-  left: clamp(10px, 2vw, 12px);
+  bottom: clamp(12px, 2vw, 15px);
+  left: clamp(12px, 2vw, 15px);
 }
 
 .badge.dental {
@@ -462,30 +468,30 @@ section {
 }
 
 .card-body {
-  padding: clamp(12px, 2.5vw, 15px);
+  padding: clamp(15px, 2.5vw, 20px);
 }
 
 .card-body h3 {
-  font-size: clamp(1.2rem, 3vw, 1.3rem);
-  margin-bottom: clamp(3px, 1vw, 4px);
+  font-size: clamp(1.3rem, 3vw, 1.4rem);
+  margin-bottom: clamp(4px, 1vw, 5px);
 }
 
 .card-body p {
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
-  margin-bottom: clamp(6px, 1.5vw, 8px);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  margin-bottom: clamp(8px, 1.5vw, 10px);
 }
 
 .card-body ul {
   list-style: none;
   padding: 0;
-  margin: clamp(10px, 2vw, 12px) 0 0;
+  margin: clamp(12px, 2vw, 15px) 0 0;
 }
 
 .card-body ul li {
-  margin-bottom: clamp(5px, 1.2vw, 6px);
-  padding-left: clamp(15px, 3vw, 18px);
+  margin-bottom: clamp(6px, 1.2vw, 8px);
+  padding-left: clamp(18px, 3vw, 20px);
   position: relative;
-  font-size: clamp(0.8rem, 2.2vw, 0.85rem);
+  font-size: clamp(0.85rem, 2.2vw, 0.9rem);
   font-weight: bold;
 }
 
@@ -505,16 +511,16 @@ section {
 
 .swiper {
   width: 100%;
-  max-width: clamp(600px, 90vw, 800px);
-  padding: clamp(15px, 3vw, 20px) 0;
+  max-width: clamp(700px, 90vw, 900px);
+  padding: clamp(20px, 3vw, 25px) 0;
   margin: 0 auto;
 }
 
 .swiper-slide {
   background: #f9fafb;
-  border-radius: 10px;
-  padding: clamp(20px, 4vw, 25px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: clamp(25px, 4vw, 30px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
 }
 
@@ -524,8 +530,8 @@ section {
 
 .testimonial-text {
   font-style: italic;
-  margin-bottom: clamp(12px, 2.5vw, 15px);
-  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  margin-bottom: clamp(15px, 2.5vw, 20px);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   color: #444;
   line-height: 1.6;
 }
@@ -533,14 +539,14 @@ section {
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: clamp(8px, 2vw, 10px);
+  gap: clamp(10px, 2vw, 12px);
   justify-content: center;
 }
 
 .testimonial-author img {
   border-radius: 50%;
-  width: clamp(40px, 8vw, 45px);
-  height: clamp(40px, 8vw, 45px);
+  width: clamp(45px, 8vw, 50px);
+  height: clamp(45px, 8vw, 50px);
   object-fit: cover;
   border: 2px solid #4caf50;
 }
@@ -550,13 +556,13 @@ section {
 }
 
 .author-info strong {
-  font-size: clamp(0.95rem, 2.5vw, 1rem);
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   color: #245e7a;
 }
 
 .author-info span {
   color: #666;
-  font-size: clamp(0.8rem, 2.2vw, 0.85rem);
+  font-size: clamp(0.85rem, 2.2vw, 0.9rem);
 }
 
 /* Appointment Section */
@@ -569,8 +575,8 @@ section {
   display: flex;
   background: white;
   color: #333;
-  border-radius: 10px;
-  max-width: clamp(700px, 90vw, 900px);
+  border-radius: 12px;
+  max-width: clamp(800px, 90vw, 1000px);
   margin: 0 auto;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
@@ -578,30 +584,30 @@ section {
 .clinic-info {
   background: #1b4559;
   color: white;
-  padding: clamp(20px, 4vw, 25px);
+  padding: clamp(25px, 4vw, 30px);
   flex: 1;
-  min-width: clamp(240px, 40vw, 260px);
+  min-width: clamp(260px, 40vw, 300px);
 }
 
 .clinic-info h3 {
-  font-size: clamp(1.3rem, 3.5vw, 1.4rem);
-  margin-bottom: clamp(12px, 2.5vw, 15px);
+  font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+  margin-bottom: clamp(15px, 2.5vw, 20px);
   color: white;
 }
 
 .clinic-info p {
-  margin-bottom: clamp(10px, 2vw, 12px);
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  margin-bottom: clamp(12px, 2vw, 15px);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   display: flex;
   align-items: center;
-  gap: clamp(6px, 1.5vw, 8px);
+  gap: clamp(8px, 1.5vw, 10px);
   color: #eee;
 }
 
 .clinic-info i {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   color: #4caf50;
-  min-width: clamp(20px, 3vw, 22px);
+  min-width: clamp(22px, 3vw, 24px);
 }
 
 .clinic-info a {
@@ -616,23 +622,23 @@ section {
 
 .appointment-form {
   flex: 2;
-  padding: clamp(20px, 4vw, 25px);
-  max-width: 600px;
+  padding: clamp(25px, 4vw, 30px);
+  max-width: 650px;
   margin: 0 auto;
   background: white;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 12px 12px 0;
 }
 
 .appointment-form h3 {
-  font-size: clamp(1.3rem, 3.5vw, 1.4rem);
-  margin-bottom: clamp(12px, 2.5vw, 15px);
+  font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+  margin-bottom: clamp(15px, 2.5vw, 20px);
   color: #245e7a;
 }
 
 .form-group {
   display: flex;
-  gap: clamp(10px, 2vw, 12px);
-  margin-bottom: clamp(10px, 2vw, 12px);
+  gap: clamp(12px, 2vw, 15px);
+  margin-bottom: clamp(12px, 2vw, 15px);
   flex-wrap: wrap;
 }
 
@@ -640,14 +646,14 @@ section {
 .form-group textarea,
 .form-group select {
   width: 100%;
-  padding: clamp(8px, 1.5vw, 10px);
+  padding: clamp(10px, 1.5vw, 12px);
   border: 1px solid #ddd;
   border-radius: 6px;
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   font-family: "Poppins", sans-serif;
   transition: border-color 0.3s ease;
   flex: 1;
-  min-width: clamp(140px, 45vw, 160px);
+  min-width: clamp(160px, 45vw, 180px);
 }
 
 .form-group input:focus,
@@ -659,23 +665,23 @@ section {
 
 .form-radio {
   display: flex;
-  gap: clamp(10px, 2vw, 12px);
-  margin: clamp(10px, 2vw, 12px) 0;
+  gap: clamp(12px, 2vw, 15px);
+  margin: clamp(12px, 2vw, 15px) 0;
   flex-wrap: wrap;
 }
 
 .form-radio label {
   display: flex;
   align-items: center;
-  gap: clamp(5px, 1.2vw, 6px);
+  gap: clamp(6px, 1.2vw, 8px);
   cursor: pointer;
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
 }
 
 .form-radio input[type="radio"] {
   appearance: none;
-  width: clamp(14px, 2.5vw, 16px);
-  height: clamp(14px, 2.5vw, 16px);
+  width: clamp(16px, 2.5vw, 18px);
+  height: clamp(16px, 2.5vw, 18px);
   border: 2px solid #ddd;
   border-radius: 50%;
   cursor: pointer;
@@ -690,8 +696,8 @@ section {
 .form-radio input[type="radio"]:checked::after {
   content: "";
   position: absolute;
-  width: clamp(6px, 1.2vw, 8px);
-  height: clamp(6px, 1.2vw, 8px);
+  width: clamp(8px, 1.2vw, 10px);
+  height: clamp(8px, 1.2vw, 10px);
   background: #4caf50;
   border-radius: 50%;
   top: 50%;
@@ -703,14 +709,16 @@ section {
   background: #4caf50;
   color: white;
   border: none;
-  padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 20px);
+  padding: clamp(12px, 2vw, 14px) clamp(20px, 3vw, 25px);
   border-radius: 6px;
   cursor: pointer;
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: 100%;
-  max-width: 220px;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
 }
 
 .submit-btn:hover {
@@ -724,13 +732,13 @@ section {
 }
 
 .fa-spinner {
-  font-size: clamp(14px, 2vw, 16px);
+  font-size: clamp(16px, 2vw, 18px);
 }
 
 #successMessage {
   text-align: center;
-  margin-top: clamp(15px, 2vw, 20px);
-  padding: clamp(8px, 1.5vw, 10px);
+  margin-top: clamp(20px, 2vw, 25px);
+  padding: clamp(10px, 1.5vw, 12px);
   background: #d4edda;
   color: #155724;
   border-radius: 5px;
@@ -742,56 +750,56 @@ section {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: clamp(20px, 5vw, 30px) clamp(10px, 2.5vw, 15px);
-  gap: clamp(12px, 3vw, 15px);
+  padding: clamp(30px, 5vw, 40px) clamp(15px, 2.5vw, 20px);
+  gap: clamp(15px, 3vw, 20px);
   background-color: #f2f2f2;
   margin: 0 auto;
-  max-width: clamp(900px, 95vw, 1100px);
+  max-width: clamp(1000px, 95vw, 1200px);
 }
 
 .contact-card {
   background-color: white;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: clamp(20px, 4vw, 25px);
-  max-width: clamp(350px, 45vw, 380px);
+  border-radius: 12px;
+  padding: clamp(25px, 4vw, 30px);
+  max-width: clamp(380px, 45vw, 400px);
   flex: 1;
 }
 
 .contact-card h2 {
-  margin-bottom: clamp(15px, 3vw, 20px);
+  margin-bottom: clamp(20px, 3vw, 25px);
   color: #245e7a;
-  font-size: clamp(1.4rem, 3.5vw, 1.6rem);
+  font-size: clamp(1.6rem, 3.5vw, 1.8rem);
 }
 
 .info-group {
   display: flex;
   align-items: flex-start;
-  margin-bottom: clamp(12px, 2.5vw, 15px);
+  margin-bottom: clamp(15px, 2.5vw, 20px);
 }
 
 .info-group i {
-  font-size: clamp(20px, 3.5vw, 22px);
+  font-size: clamp(22px, 3.5vw, 24px);
   color: #0d6efd;
-  margin-right: clamp(10px, 2vw, 12px);
+  margin-right: clamp(12px, 2vw, 15px);
   margin-top: 3px;
 }
 
 .info-text {
   line-height: 1.5;
   color: #333;
-  font-size: clamp(0.9rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.95rem, 2.5vw, 1rem);
 }
 
 hr {
   border: none;
   border-top: 1px solid #ccc;
-  margin: clamp(15px, 3vw, 20px) 0;
+  margin: clamp(20px, 3vw, 25px) 0;
 }
 
 .socials {
   display: flex;
-  gap: clamp(10px, 2vw, 12px);
+  gap: clamp(12px, 2vw, 15px);
   flex-wrap: wrap;
 }
 
@@ -812,15 +820,15 @@ hr {
     #285aeb 90%
   );
   color: white;
-  padding: clamp(7px, 1.5vw, 8px);
+  padding: clamp(8px, 1.5vw, 10px);
   border-radius: 50%;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease;
-  width: clamp(30px, 5vw, 34px);
-  height: clamp(30px, 5vw, 34px);
+  width: clamp(34px, 5vw, 36px);
+  height: clamp(34px, 5vw, 36px);
 }
 
 .socials a:hover {
@@ -828,22 +836,21 @@ hr {
 }
 
 .social-name {
-  margin-top: clamp(5px, 1vw, 6px);
-  font-size: clamp(0.75rem, 2vw, 0.8rem);
+  margin-top: clamp(6px, 1vw, 8px);
+  font-size: clamp(0.8rem, 2vw, 0.85rem);
   color: #333;
 }
 
 .map {
   flex: 1;
-  min-width: clamp(250px, 40vw, 280px);
+  min-width: clamp(280px, 40vw, 320px);
 }
 
 .map iframe {
   width: 100%;
-  height: 100%;
-  min-height: clamp(280px, 50vw, 360px);
+  height: clamp(300px, 50vw, 400px);
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -851,27 +858,27 @@ hr {
 footer {
   background: #1b1f24;
   color: white;
-  padding: clamp(20px, 5vw, 30px) clamp(10px, 2.5vw, 15px);
+  padding: clamp(30px, 5vw, 40px) clamp(15px, 2.5vw, 20px);
 }
 
 .footer-content {
-  max-width: clamp(900px, 95vw, 1100px);
+  max-width: clamp(1000px, 95vw, 1200px);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(clamp(160px, 25vw, 180px), 1fr)
+    minmax(clamp(180px, 25vw, 200px), 1fr)
   );
-  gap: clamp(20px, 4vw, 25px);
+  gap: clamp(25px, 4vw, 30px);
 }
 
 .footer-column {
-  min-width: clamp(160px, 25vw, 180px);
+  min-width: clamp(180px, 25vw, 200px);
 }
 
 .footer-column h3 {
-  font-size: clamp(1rem, 2.5vw, 1.1rem);
-  margin-bottom: clamp(10px, 2vw, 12px);
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+  margin-bottom: clamp(12px, 2vw, 15px);
   color: #4caf50;
 }
 
@@ -881,7 +888,7 @@ footer {
 }
 
 .footer-column ul li {
-  margin-bottom: clamp(5px, 1.2vw, 6px);
+  margin-bottom: clamp(6px, 1.2vw, 8px);
 }
 
 .footer-column a {
@@ -896,16 +903,9 @@ footer {
 
 .social-links {
   display: flex;
-  gap: clamp(8px, 2vw, 13px);
-  margin-top: clamp(10px, 2vw, 12px);
+  gap: clamp(10px, 2vw, 15px);
+  margin-top: clamp(12px, 2vw, 15px);
   flex-wrap: wrap;
-}
-
-.social-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .social-links a {
@@ -918,8 +918,8 @@ footer {
     #285aeb 90%
   );
   color: white;
-  width: clamp(30px, 5vw, 34px);
-  height: clamp(30px, 5vw, 34px);
+  width: clamp(34px, 5vw, 36px);
+  height: clamp(34px, 5vw, 36px);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -932,28 +932,22 @@ footer {
   transform: scale(1.1);
 }
 
-.social-name {
-  margin-top: clamp(5px, 1vw, 6px);
-  font-size: clamp(0.75rem, 2vw, 0.8rem);
-  color: #8a8f98;
-}
-
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: clamp(20px, 4vw, 25px);
-  padding-top: clamp(12px, 2.5vw, 15px);
+  margin-top: clamp(25px, 4vw, 30px);
+  padding-top: clamp(15px, 2.5vw, 20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: clamp(0.8rem, 2.2vw, 0.85rem);
+  font-size: clamp(0.85rem, 2.2vw, 0.9rem);
   color: #8a8f98;
   flex-wrap: wrap;
-  gap: clamp(6px, 1.5vw, 8px);
+  gap: clamp(8px, 1.5vw, 10px);
 }
 
 .footer-bottom a {
   color: #8a8f98;
-  margin-left: clamp(6px, 1.2vw, 8px);
+  margin-left: clamp(8px, 1.2vw, 10px);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -967,7 +961,7 @@ footer {
 /* Ultra-small screens (e.g., foldable phones, very small devices) */
 @media (max-width: 360px) {
   .container {
-    padding: 0 8px;
+    padding: 0 10px;
   }
 
   .hero-content h1 {
@@ -1052,6 +1046,7 @@ footer {
 
   .hero-buttons {
     align-items: center;
+    right: 0;
   }
 
   .top-buttons {
@@ -1071,7 +1066,7 @@ footer {
 
   .book-appointment-btn {
     max-width: clamp(160px, 45vw, 180px);
-    margin-right: 0; /* Remove the desktop margin */
+    margin-right: 0;
   }
 
   .hero-image img {
@@ -1099,7 +1094,7 @@ footer {
   .clinic-info,
   .appointment-form {
     min-width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .contact-container {
@@ -1175,6 +1170,7 @@ footer {
 
   .hero-buttons {
     align-items: center;
+    right: 0;
   }
 
   .top-buttons {
@@ -1192,7 +1188,7 @@ footer {
 
   .book-appointment-btn {
     max-width: clamp(180px, 40vw, 200px);
-    margin-right: 0; /* Remove the desktop margin */
+    margin-right: 200px;
   }
 
   .hero-image img {
@@ -1220,7 +1216,7 @@ footer {
   .clinic-info,
   .appointment-form {
     min-width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
   }
 
   .contact-container {
@@ -1246,6 +1242,10 @@ footer {
 
   .hero-content {
     max-width: 450px;
+  }
+
+  .hero-buttons {
+    right: 59px;
   }
 
   .hero-image img {
@@ -1310,8 +1310,7 @@ footer {
   .about-image img,
   .card-image {
     image-rendering: -webkit-optimize-contrast;
-    position: relative;
-    left: 40px;
+  
   }
 
   body {
