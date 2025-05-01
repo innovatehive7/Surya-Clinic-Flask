@@ -1066,7 +1066,7 @@ footer {
 
   .book-appointment-btn {
     max-width: clamp(160px, 45vw, 180px);
-    margin-right: 0;
+    margin-right: 98px;
   }
 
   .hero-image img {
@@ -1310,7 +1310,6 @@ footer {
   .about-image img,
   .card-image {
     image-rendering: -webkit-optimize-contrast;
-  
   }
 
   body {
